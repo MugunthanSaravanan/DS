@@ -1,0 +1,45 @@
+#include<iostream>
+#include<array>
+uisng namespace std;
+struct node
+{
+    int data;
+    struct Node* next;
+};
+struct Node* createlist(int value[],int len)
+{
+    struct Node* head=NULL;
+    struct Node* previousNode=NULL;
+    for(int i=0;i<=len;i++)
+    {
+        struct Node* newNode=new struct Node;
+        newNode->data=values[i];
+        newNode->next=NULL;
+        if(i==0)
+        {
+            head=newNode;
+        }
+        else
+        {
+            previousNode->next=newNode;
+        }
+        previousNode=newNode;
+    }
+    return head;
+}
+void printlist(struct Node* header)
+{
+    struct Node* temp=header;
+    while(temp!=NULL)
+    {
+        cout<<temp->data;
+        tenp=temp->next;
+    }
+}
+int main()
+{
+    int val[]={2,5,7,8,9};
+    struct Node* header=createlist(val,5);
+    printlist(header);
+
+}
